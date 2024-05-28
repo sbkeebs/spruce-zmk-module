@@ -1,0 +1,27 @@
+# Le Chiffre (stm32) board configuration
+
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if BOARD_SPRUCE_LEFT
+
+config BOARD
+    default "spruce_left"
+
+config ZMK_KEYBOARD_NAME
+    default "Spruce"
+
+config ZMK_USB
+    default y
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
+endif # BOARD_SPRUCE_LEFT
+
+if BOARD_SPRUCE_RIGHT
+
+config BOARD
+    default "spruce_right"
+
+endif # BOARD_SPRUCE_RIGHT

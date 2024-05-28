@@ -1,0 +1,12 @@
+# Spruce board configuration
+
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config BOARD_SPRUCE_LEFT
+    bool "Spruce Left"
+    depends on SOC_STM32F072XB
+
+config BOARD_SPRUCE_RIGHT
+    bool "Spruce Right"
+    depends on SOC_STM32F072XB

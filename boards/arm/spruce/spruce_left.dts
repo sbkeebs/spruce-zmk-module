@@ -1,0 +1,25 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/dts-v1/;
+#include "spruce.dtsi"
+
+&kscan {
+    col-gpios
+        = <&gpioa 3 (GPIO_ACTIVE_HIGH)>
+        , <&gpioa 4 (GPIO_ACTIVE_HIGH)>
+        , <&gpioa 5 (GPIO_ACTIVE_HIGH)>
+        , <&gpioa 6 (GPIO_ACTIVE_HIGH)>
+        , <&gpioa 7 (GPIO_ACTIVE_HIGH)>
+        ;
+
+    row-gpios
+        = <&gpioa 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpioa 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpiob 3  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpiob 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        ;
+};

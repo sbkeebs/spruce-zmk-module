@@ -1,0 +1,13 @@
+file_format: "1"
+id: spruce
+name: Spruce
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+url: https://github.com/sbkeebs/spruce
+siblings:
+  - spruce_left
+  - spruce_right
