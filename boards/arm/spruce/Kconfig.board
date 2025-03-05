@@ -6,7 +6,9 @@
 config BOARD_SPRUCE_LEFT
     bool "Spruce Left"
     depends on SOC_STM32F072XB
+    select ZMK_KSCAN_MATRIX_POLLING
 
 config BOARD_SPRUCE_RIGHT
     bool "Spruce Right"
     depends on SOC_STM32F072XB
+    select ZMK_KSCAN_MATRIX_POLLING

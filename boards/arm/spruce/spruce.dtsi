@@ -19,7 +19,12 @@
         zephyr,flash = &flash0;
         zmk,kscan = &kscan;
         zmk,matrix_transform = &transform;
-	zmk,split-uart = &usart1;
+    };
+
+    wired_split {
+	    compatible = "zmk,wired-split";
+
+	    device = <&usart1>;
     };
 
     transform: transform {
@@ -51,11 +56,19 @@ zephyr_udc0: &usb {
     num-bidir-endpoints = <6>;
 };
 
+&dma1 {
+	status = "okay";
+};
+
 &usart1 {
-	pinctrl-0 = <&usart1_tx_pb6 &usart1_rx_pb7>;
+	pinctrl-0 = <&usart1_tx_pa9 &usart1_rx_pa10>;
 	pinctrl-names = "default";
 	current-speed = <115200>;
 	status = "okay";
+
+	dmas = <&dma1 2 (STM32_DMA_PERIPH_TX | STM32_DMA_PRIORITY_HIGH)>,
+	       <&dma1 3 (STM32_DMA_PERIPH_RX | STM32_DMA_PRIORITY_HIGH)>;
+	dma-names = "tx", "rx";
 };
 
 &clk_hsi {
