@@ -31,6 +31,7 @@
                 , <&macro_tap &kp COMMA>
                 , <&macro_release &kp LSHFT>
                 , <&macro_press &kp N3>
+                , <&macro_release &kp N3>
                 ;
         };
         col3: colon_three {
@@ -41,6 +42,7 @@
                 , <&macro_tap &kp SEMI>
                 , <&macro_release &kp LSHFT>
                 , <&macro_press &kp N3>
+                , <&macro_release &kp N3>
                 ;
         };
     };
@@ -54,7 +56,7 @@
             bindings = <
        &qtab     &kp W  &kp F      &kp P    &kp B         &kp J         &kp L     &kp U     &kp Y   &kp BKSP
        &kp A     &kp R  &kp S      &kp T    &kp G         &kp M         &kp N     &kp E     &kp I   &kp O   
-       &kp Z     &kp X  &kp C      &kp D    &kp V         &kp K         &kp H     &kp COMMA &kp DOT &kp SLASH     
+       &kp LSHFT &kp X  &kp C      &kp D    &kp V         &kp K         &kp H     &kp COMMA &kp DOT &kp SLASH     
                         &kp LCTRL  &kp LALT &lt L_1 ENTER &lt L_2 SPACE &kp MINUS &kp EQUAL
             >;
         };
@@ -64,7 +66,7 @@
             bindings = <
        &kp ESC   &trans &trans     &trans       &trans       &trans        &trans    &trans    &trans  &kp SEMI
        &sk LCTRL &trans &trans     &kp C_VOL_UP &trans       &trans        &trans    &trans    &trans  &kp SQT
-       &sk LSHFT &trans &trans     &kp C_VOL_DN &trans       &trans        &trans    &col3     &lt3    &kp GRAVE
+       &kp Z     &trans &trans     &kp C_VOL_DN &trans       &trans        &trans    &col3     &lt3    &kp GRAVE
                         &kp LSHFT  &kp LGUI     &trans       &kp LSHFT     &kp LBKT  &kp RBKT
             >;
         };
