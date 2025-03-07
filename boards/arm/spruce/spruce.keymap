@@ -45,6 +45,18 @@
                 , <&macro_release &kp N3>
                 ;
         };
+        ssht: screenshot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LSHFT>
+                , <&macro_press &kp S>
+                , <&macro_release &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
     };
 
     keymap {
@@ -65,8 +77,8 @@
             label = "L_1";
             bindings = <
        &kp ESC   &trans &trans     &trans       &trans       &trans        &trans    &trans    &trans  &kp SEMI
-       &sk LCTRL &trans &trans     &kp C_VOL_UP &trans       &trans        &trans    &trans    &trans  &kp SQT
-       &kp Z     &trans &trans     &kp C_VOL_DN &trans       &trans        &trans    &col3     &lt3    &kp GRAVE
+       &sk LCTRL &trans &trans     &kp C_VOL_UP &ssht        &trans        &trans    &trans    &trans  &kp SQT
+       &kp Z     &trans &trans     &kp C_VOL_DN &trans       &trans        &trans    &lt3      &col3   &kp GRAVE
                         &kp LSHFT  &kp LGUI     &trans       &kp LSHFT     &kp LBKT  &kp RBKT
             >;
         };
